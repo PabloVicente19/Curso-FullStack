@@ -17,7 +17,7 @@ export const LinksContainerStyled = styled.div`
 export const LinkContainerStyled = styled.div`
   font-size: 1.2rem;
   align-items: center;
-  color: ${(props) => (props.home ? "#ff9d01" : "#ff9300")};
+  color: ${(props) => (props.home ? "#ff9d01" : "#fff")};
 `;
 export const UserContainerStyled = styled(LinkContainerStyled)`
   display: flex;
@@ -31,7 +31,6 @@ export const HomeContainerStyled = styled(LinkContainerStyled)`
 `;
 export const MenuContainerSyled = styled(LinkContainerStyled)`
   display: none;
-
   cursor: pointer;
   @media (max-width: 768px) {
     display: flex;

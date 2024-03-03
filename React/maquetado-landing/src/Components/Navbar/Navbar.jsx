@@ -4,8 +4,9 @@ import {
   LinkContainerStyled,
   LinksContainerStyled,
   NavbarContainerStyled,
+  UserContainerStyled,
 } from "./NavbarStyles";
-
+import { motion } from "framer-motion";
 export default function Navbar() {
   return (
     <NavbarContainerStyled>
@@ -19,11 +20,13 @@ export default function Navbar() {
       </div>
       <LinksContainerStyled>
         <HomeContainerStyled>
-          <a href="#">
-            <LinkContainerStyled>Icono</LinkContainerStyled>
-          </a>
-          home
+          <motion.div whileTap={{ scale: 1.2 }}>
+            <a href="#">
+              <LinkContainerStyled home>Icono</LinkContainerStyled>
+            </a>
+          </motion.div>
         </HomeContainerStyled>
+        <UserContainerStyled>stilo</UserContainerStyled>
       </LinksContainerStyled>
     </NavbarContainerStyled>
   );
