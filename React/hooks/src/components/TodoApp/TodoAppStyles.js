@@ -25,3 +25,13 @@ export const ButtonStyled = styled.button`
   border-radius: 0.5rem;
   cursor: pointer;
 `;
+export const TasksContainerStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #313131;
+  padding: 0.5rem;
+`;
+export const Task = styled.span`
+  text-align: left;
+`;
