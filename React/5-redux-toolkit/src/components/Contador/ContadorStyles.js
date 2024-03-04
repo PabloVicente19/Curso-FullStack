@@ -26,5 +26,5 @@ export const BtnStyled = styled.button`
   border: none;
   border-radius: 0.5rem;
   box-shadow: 1px 1px 5px white;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 `;
