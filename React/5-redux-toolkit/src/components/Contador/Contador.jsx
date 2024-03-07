@@ -1,6 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { sumar } from "../../slices/contadorSlice";
 
 import {
   BtnContainerStyled,
@@ -10,25 +8,19 @@ import {
   TitleStyled,
 } from "./ContadorStyles";
 import { useDispatch, useSelector } from "react-redux";
+import { reset, resta, suma } from "../../slices/contadorSlice";
 
 const Contador = () => {
   const contador = useSelector((state) => state.contador.valor);
   const dispatch = useDispatch();
-
   return (
     <ContadorContainerStyled>
-      <TitleStyled>{contador}</TitleStyled>
-      <ResultStyled>2</ResultStyled>
+      <TitleStyled>Contador</TitleStyled>
+      <ResultStyled>{contador}</ResultStyled>
       <BtnContainerStyled>
-        <BtnStyled
-          onClick={() => {
-            dispatch(sumar());
-          }}
-        >
-          +
-        </BtnStyled>
-        <BtnStyled>RESET</BtnStyled>
-        <BtnStyled>+</BtnStyled>
+        <BtnStyled onClick={() => dispatch(resta())}>-</BtnStyled>
+        <BtnStyled onClick={() => dispatch(reset())}>RESET</BtnStyled>
+        <BtnStyled onClick={() => dispatch(suma())}>+</BtnStyled>
       </BtnContainerStyled>
     </ContadorContainerStyled>
   );
